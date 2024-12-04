@@ -1,0 +1,115 @@
+.hidding3{
+font-family: "Marck Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding-right:60px;
+}
+
+.logo{
+	display:flex;
+	align-items:center;
+}
+
+.loto_egg{
+	display:flex;
+	align-items:center;
+	
+}
+.fa-bars-staggered{
+	font-size:40px;
+	color:black;
+	margin-left:5px;
+}
+
+.picture{
+	height:60px;
+	background-color:#fdd670;
+	padding-left:30px;
+}
+
+#search{
+ width:600px;
+ 
+}
+
+.locaton_icon{
+	display:flex;
+	align-items:center;
+	gap:10px;
+	
+	
+}
+
+.location_text{
+	display:flex;
+	align-items:center;
+	gap:10px;
+	color:red;
+	
+}
+.language{
+	display:flex;
+	align-items:center;
+	gap:10px;
+	margin-right:5px;
+	
+}
+.menu_ber{
+	display:flex;
+	gap:10px;
+}
+
+.naver{
+	display:flex;
+	justify-content:space-between;
+	border:2px solid green;
+	background-color:#fdd670;
+	margin:10px;
+}
+
+.hidding4{
+	border:2px solid red;
+	padding-right:10px;
+	padding-left:10px;
+	border-radius:10px;
+		background-color:#E9E9E9;
+
+	
+}
+.text_1{
+	border:;
+	background-color:#E9E9E9;
+	padding-left:5px;
+	color:red;
+}
+.text_2{
+	border:;
+	background-color:#E9E9E9;
+	color:blue;
+}
+.fa-location-dot{
+	color:red;
+}
+.fa-chevron-down{
+	font-size:10px;
+	color:red;
+}
+
+.button{
+	padding-right:30px;
+	padding-left:30px;
+	padding-top:5px;
+	padding-bottom:5px;
+	
+	
+	font-size:20px;
+	background-color:#0064b5;
+	border-radius:5px;
+	color:white;
+	
+}
+.login{
+	
+	
+	
+}
