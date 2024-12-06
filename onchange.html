@@ -16,20 +16,37 @@
 <body>
 
 <div class='chaldal'>
-<select id='selectinput' input='changefirst()'>
-<input type='text' placeholder='Enter your name' onchange='product'>
 
+<!--<label for='message'>Message</label>
+<input placeholder='Enter some text' id='message'name='message'>
+<p id='result'></p>-->
+
+<select onchange='handleOnChangeEvent(this.value)'>
+<option value=''>select a color</option>
+<option value='blue'>Blue</option>
+<option value='red'>red</option>
+<option value='green'>green</option>
 </select>
 
-
-<div>
-
-
-
-
-
-
 </div> 
+
+
+<script>
+function handleOnChangeEvent(x){
+  const result=document.querySelector('body');
+  result.style.backgroundColor=x;
+}
+
+
+/*const message=document.querySelector('#message');
+const result=document.querySelector('#result');
+ message.addEventListener('input',function(){
+ console.log(message);
+  result.textContent=message.value;
+ 
+ });*/
+
+</script>
 
 
 </body>
