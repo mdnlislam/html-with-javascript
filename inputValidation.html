@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onchange-Validation</title>	
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+ 
+ <style>
+ 
+ </style>
+ 
+</head>
+
+<body>
+<form>
+<label for=''>Name</label><input class='name' type='text' placeholder='Enter your name:'><br><br>
+<p id='message'></p>
+<button type='text'>Submit</button>
+</form>
+
+
+<script>
+const inputElement=document.querySelector('.name');
+const outMessage=document.querySelector('#message');
+
+console.log(inputElement);
+inputElement.addEventListener('input',function(){
+const inputText=inputElement.value.trim();
+const regex=/^[a-zA-Z]+$/
+const alpha=/^(.*[a-zA-Z]){4,}.*$/
+const mex=/^(.*[a-zA-Z]){11,}.*$/
+
+
+if(inputText===''){
+ outMessage.innerText='plz. Enter your name';
+}
+else if(!regex.test(inputText)){
+outMessage.innerText='digits not allow';
+}
+else if(!alpha.test(inputText)){
+outMessage.innerText='Minimum 4 letters should be written';
+}
+else if(mex.test(inputText)){
+outMessage.innerText='Meximum 10 letters ';
+}
+else{
+outMessage.innerText='';
+}
+
+});
+
+</script>
+</body>
+
+</html>
