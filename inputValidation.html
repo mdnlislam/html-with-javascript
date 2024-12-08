@@ -15,23 +15,28 @@
 
 <body>
 <form>
-<label for=''>Name</label><input class='name' type='text' placeholder='Enter your name:'><br><br>
-<p id='message'></p>
+<label for=''>Name:</label><input class='name' type='text' placeholder='Enter your name:'><br><br>
+<p id='message1'></p>
+<label for=''>Email:</label><input class='email' type='text' placeholder='Enter your email:'><br><br>
+<p id='message2'></p>
+<label for=''>Phone Number:</label><input class='Number' type='text' placeholder='Enter your name:'><br><br>
+<p id='message3'></p>
 <button type='text'>Submit</button>
 </form>
 
 
 <script>
 const inputElement=document.querySelector('.name');
-const outMessage=document.querySelector('#message');
+const outMessage=document.querySelector('#message1');
 
-console.log(inputElement);
+
+
 inputElement.addEventListener('input',function(){
 const inputText=inputElement.value.trim();
+//name validation
 const regex=/^[a-zA-Z]+$/
 const alpha=/^(.*[a-zA-Z]){4,}.*$/
 const mex=/^(.*[a-zA-Z]){11,}.*$/
-
 
 if(inputText===''){
  outMessage.innerText='plz. Enter your name';
@@ -48,8 +53,64 @@ outMessage.innerText='Meximum 10 letters ';
 else{
 outMessage.innerText='';
 }
+});
+
+//Email
+const emailElement=document.querySelector('.email');
+const emailMessage=document.querySelector('#message2');
+
+emailElement.addEventListener('input',function(){
+
+const inputEmail=emailElement.value.trim();
+
+const email=/^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]{3}/
+
+if(inputEmail===''){
+emailMessage.innerText='Email is required';
+}
+else if (!email.test(inputEmail)){
+   emailMessage.innerText='Must be a vaild email';
+}
+else{
+emailMessage.innerText='';
+
+}
+});
+
+// Phone Number Validation
+const phoneNumber=document.querySelector('.Number');
+const phoneMessage=document.querySelector('#message3');
+
+phoneNumber.addEventListener('input',function(){
+
+const numberInput=phoneNumber.value.trim();
+
+const phone=/^\+?[1-9]\d{0,14}$/
+const latter=/^[a-zA-Z]+$/
+const mix=/^\d{0,14}$/
+
+
+
+if(numberInput===''){
+phoneMessage.innerText='phone number is required';
+}
+else if(phone.test(numberInput)){
+phoneMessage.innerText='minimum 14 digits';
+
+}
+else if(latter.test(numberInput)){
+phoneMessage.innerText='latter not allow';
+
+}
+
+
+else{
+phoneMessage.innerText='';
+
+}
 
 });
+
 
 </script>
 </body>

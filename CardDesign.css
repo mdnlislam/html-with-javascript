@@ -1,4 +1,11 @@
-li::marker {
-    color: red;
-    font-size: 20px;
+.card_Design{
+	border:2px solid green;
+	width:700px;
+	background-color:rgba(26, 26, 26, 0.7);
+}
+
+.text{
+	width:400px;
+	color:white;
+	margin-left:20px;
 }
