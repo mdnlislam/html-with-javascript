@@ -87,7 +87,7 @@ const numberInput=phoneNumber.value.trim();
 
 const phone=/^\+?[1-9]\d{0,14}$/
 const latter=/^[a-zA-Z]+$/
-const mix=/^\d{0,14}$/
+const mix=/^\d+$/
 
 
 
@@ -98,7 +98,7 @@ else if(phone.test(numberInput)){
 phoneMessage.innerText='minimum 14 digits';
 
 }
-else if(latter.test(numberInput)){
+else if(!mix.test(numberInput)){
 phoneMessage.innerText='latter not allow';
 
 }
