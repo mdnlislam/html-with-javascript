@@ -1,11 +1,70 @@
-.card_Design{
-	border:2px solid green;
-	width:700px;
-	background-color:rgba(26, 26, 26, 0.7);
+.img{
+	height:200px;
+	margin-top:70px;
 }
 
+
+
+.card_Design{
+	border:;
+	width:700px;
+	height:400px;
+	background-color:#fcead7;
+}
 .text{
+	border:;
 	width:400px;
+}
+.hidding2{
+	font-size:30px;
+}
+.paragraph{
+	font-size:17px;
+}
+
+
+.icon{
+	display:flex;
+	align-items: center; 
+	gap:10px;
+}
+.grid_container{
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.buttom{
+	display:flex;
+	gap:10px;
+}
+.button{
+	padding:15px;
+	background-color:#ff5c35;
+	font-size:20px;
 	color:white;
-	margin-left:20px;
+	border-radius:10px;
+	border:none;
+}
+
+.button_text{
+	display:flex;
+	margin-top:10px;
+	gap:10px;
+}
+
+.logo{
+	display:flex;
+	 justify-content:space-around;
+}
+.fa-circle-check{
+color:#1f7d3d;
+font-size:15px;
+}
+.ancor{
+	color:#005fa3;
+	font-size:20px;
+	font-weight: bold;
+}
+.fa-arrow-up-right-from-square{
+	color:#005fa3;
+	margin-top:5px;
 }
