@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+
+<style>
+
+</style>
+</head>
+
+<body>
+<form>
+<input type='file' onchange='preview()'>
+<img id='frame' src='' width='100px' height='100px'/>
+
+</form>
+
+<script>
+function preview(){
+frame.src=URL.createObjectURL(event.target.files[0]);
+}
+
+</script>
+</body>
+
+</html>
+
+

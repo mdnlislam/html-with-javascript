@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+body{
+margin:0px;
+height:100px;
+background-color:#333;
+}
+.center{
+height:100%;
+display:flex;
+align-item:center;
+justify-content:center;
+
+}
+.from_input{
+ width:250px;
+ padding:20px;
+ background-color:#fff;
+ border:2px doshed #555;
+}
+
+.from_input input{
+   display:;
+}
+
+.from_input label{
+ display:block;
+ width:100%;
+ height:50px;
+ line-height:50px;
+ text-align:center;
+ background-color:#333;
+ color:#fff;
+ font-size:15px;
+ text-transform:uppercase;
+ border-radius:10px;
+}
+.from_input img{
+  width:100%;
+  display:;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class='center'>
+  <div class='from_input'>
+    <label for='Image'>Upload Image</label>
+	<input type='file' id='Image' onchange='showPreview()'>
+	
+	<div class='preview'>
+	  <img id='zit'>
+	  
+	</div>
+  
+  
+  
+  </div>
+
+</div>
+
+<script>
+function showPreview(){
+Image.src=URL.createObjectURL(event.target.files[0]);
+   
+}
+
+</script>
+
+</body>
+</html>
+
