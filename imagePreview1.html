@@ -3,46 +3,13 @@
 <html>
 
 <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
 <style>
-body{
-margin:0px;
-height:100px;
-background-color:#333;
-}
-.center{
-height:100%;
-display:flex;
-align-item:center;
-justify-content:center;
 
-}
-.from_input{
- width:250px;
- padding:20px;
- background-color:#fff;
- border:2px doshed #555;
-}
 
-.from_input input{
-   display:;
-}
-
-.from_input label{
- display:block;
- width:100%;
- height:50px;
- line-height:50px;
- text-align:center;
- background-color:#333;
- color:#fff;
- font-size:15px;
- text-transform:uppercase;
- border-radius:10px;
-}
-.from_input img{
-  width:100%;
-  display:;
+.table_con{
+display:none;
 }
 
 
@@ -51,27 +18,40 @@ justify-content:center;
 
 <body>
 
-<div class='center'>
-  <div class='from_input'>
-    <label for='Image'>Upload Image</label>
-	<input type='file' id='Image' onchange='showPreview()'>
-	
-	<div class='preview'>
-	  <img id='zit'>
-	  
-	</div>
-  
-  
-  
+<div class='table'>
+  <a class='icon' href=''><i class="fa-solid fa-caret-down"></i> </a>
+  <div class='message'>
   </div>
-
+  
+   <div class='table_con'>
+      <h2>rakib</h2>
+   </div>
 </div>
 
 <script>
-function showPreview(){
-Image.src=URL.createObjectURL(event.target.files[0]);
-   
-}
+ const Down_icon=document.querySelector('.icon');
+ const show_display=document.querySelector('.table_con')
+ const  output=document.querySelector('.message');
+  let isVisible = false;
+  
+  
+ Down_icon.addEventListener('click',function(){
+     event.preventDefault();
+ 
+ 
+   if(!isVisible){
+    output.innerHTML = show_display.innerHTML; 
+	output.style.display = 'block';
+   }
+   else{
+    output.innerText = '';
+	 output.style.display = 'none';
+   }
+    isVisible = !isVisible;
+  
+ });
+ 
+ //console.log(Down_icon,show_display);
 
 </script>
 
