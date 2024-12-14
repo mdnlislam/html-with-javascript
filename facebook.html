@@ -52,28 +52,39 @@ font-size:35px;
 .log_menu{
  border:;
  width:193px;
- height:210px;
+ 
  display:none;
  margin-left:39%;
  margin-top:;
  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  background-color:white;
- 
+ border:2px solid green;
 }
 .form{
 margin-left:10px;
 margin-right:10px;
+margin-left:40%;
+width:183px;
+ 
+ margin-left:-2%;
+ margin-top:;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ background-color:white;
+ 
+ padding-left:10px;
+ padding-bottom:10px;
 }
 .forget{
 font-size:10px;
 text-align:right;
-margin-right:;
+margin-right:20px;
 }
 
 .log_in{
 border:2px solid green;
 text-align:center;
 background-color:#1f57c3;
+margin-right:13px;
 }
 .lon_in_butt{
 border:none;
@@ -89,14 +100,11 @@ text-align:center;
 }
 
 .display{
-margin-left:40%;
-width:193px;
- height:210px;
+ margin-left:40%;
+ 
  display:none;
  margin-left:39%;
- margin-top:;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- background-color:white;
+ 
 }
 
 </style>
@@ -132,8 +140,11 @@ width:193px;
 		  <form class='form'>
 		   <label>Email or phone</label> <br>
 		   <input type='text' placeholder='Enter a mail' class='email'/> <br>
+		   <p id='Out_message'></p>
 		   <label>password</label> <br>
 		   <input type='password' placeholder='Enter a password' class='password'/>
+		   <p id='message'></p>
+		   
 		     <h3 class='forget'>forget account</h3>
 		      <div class='log_in'>
 			     <button class='lon_in_butt'>log In</button>
@@ -170,8 +181,31 @@ isVisible = !isVisible;
 });
 
 
+//input validation
 
-console.log(input,output);
+const EmailEvent=document.querySelector('.email');
+const message1=document.querySelector('#Out_message');
+console.log(message1)
+EmailEvent.addEventListener('input',function(){
+const inputText=EmailEvent.value.trim();
+const email=/^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]{3}/
+
+if(inputText===''){
+message1.innerHTML='Email is required';
+}
+else if (!email.test(inputText)){
+   message1.innerHTML='Must be a vaild email';
+}
+else{
+message1.innerHTML='';
+
+}
+
+});
+
+
+console.log(EmailEvent);
+
 
 
 

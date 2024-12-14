@@ -1,13 +1,15 @@
 const digits=[15,12,17,11,31 ,60,19,28];
+const digits2=[17,15,12];
+const r1=[15,12,17];
 
 
-/*for(let digit in digits){
+for(let digit in digits){
 	const first=digits[digit];
 	const key2=Number(digit)+1;
 	const last=digits[key2];
 	
 	//console.log(last);
-	if(first>last ){
+	if(first<last ){
 	digits[digit]=last;
     digits[key2]=first;	
 	}
@@ -20,7 +22,7 @@ for(let d in digits){
 	const last=digits[key2];
 	
 	//console.log(last);
-	if(first>last ){
+	if(first<last ){
 	digits[d]=last;
     digits[key2]=first;	
 	}
@@ -29,7 +31,7 @@ for(let d in digits){
 //for(){}
 	
 } 
-} */
+} 
 
 
 
