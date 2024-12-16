@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+
+</style>
+</head>
+
+<body>
+
+<p class='demo'>wqe</p>
+
+<script>
+function myDisplay(some) {
+    const messageShow = document.querySelector('.demo');
+    messageShow.innerHTML = some;
+    console.log(messageShow);
+}
+let myPromise=new Promise(function(myResolve,myReject){
+
+let x=2;
+
+// some code (try to change x to 5)
+
+if(x===0){
+myResolve('ok');
+
+}else{
+myReject('Error');
+}
+
+});
+myPromise.then(
+function(value){myDisplay(value);},
+function(error){myDisplay(error);}
+);
+
+
+</script>
+
+</body>
+</html>
+
+
+

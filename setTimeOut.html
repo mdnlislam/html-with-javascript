@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+
+</head>
+
+<body>
+<p>wait 3 seconds (3000 milliseconds)for this page to change</p>
+
+
+<h2 class='out_message'><h2>
+
+<script>
+
+setTimeout(function(){
+myFunction('I love Alloh');
+},3000);
+
+function myFunction(value){
+const message=document.querySelector('.out_message');
+message.innerHTML=value;
+}
+
+</script>
+</body>
+
+</html>
+
