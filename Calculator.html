@@ -6,37 +6,55 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
 <style>
+body{
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:hsl(0,0%,70%);
 
-   .digit{
-   display:grid;
-   grid-template-columns:auto auto auto;
-    grid-gap:50px;
-	margin-left:10px;
-	margin-right:-10px;
-   }
-   .calculator{
-   width:200px;
-   border:2px solid green;
-   text-align:center;
-	padding-bottom:10px;
+}
+.calculator{
+font-family:Arial,sans-serif;
+background-color:hsl(0,0%,15%);
+border-radius:15px;
+max-width:350px;
+overflow:hidden;
+}
+#keys{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+padding:25px;
+}
+#display{
+width:100%;
+padding:20px;
+font-size:25px;
+text-align:left;
+border:none;
+background-color:hsl(0,0%,20%);
+color:white;
+
+}
+button{
+width:60px;
+height:60px;
+border-radius:50px;
+border:none;
+background-color:hsl(0,0%,30%);
+color:white;
+font-size:35px;
+font-weight:bold;
+cursor:pointer;
+
+}
+
+.operator_btn{
+
+background-color:;
+}
    
-   }
-   .dissplay{
-     border:2px solid blue;
-	 height:70px;
-   
-   }
-   .digit_icon{
-   display:grid;
-   grid-gap:20px;
-   width:50px;
-	 padding-top:10px;
-   
-   }
-   .text{
-   display:flex;
-   gap:20px;
-   }
 
 </style>
 </head>
@@ -45,43 +63,49 @@
 
 <div class='calculator'>
 
-   <div class='dissplay'>
-   
-   
-   
-   </div>
+<input id='display' readonly >
 
+  <div id='keys'>
+    <button onclick="appendToDisplay('+')"class="operator_btn">+</button>
+	<button onclick="appendToDisplay('7')">7</button>
+	<button onclick="appendToDisplay('8')">8</button>
+	<button onclick="appendToDisplay('9')">9</button>
+	<button onclick="appendToDisplay('-')"class="operator_btn">-</button>
+	<button onclick="appendToDisplay('4')">4</button>
+	<button onclick="appendToDisplay('5')">5</button>
+	<button onclick="appendToDisplay('6')">6</button>
+	<button onclick="appendToDisplay('*')"class="operator_btn">*</button>
+    <button onclick="appendToDisplay('1')">1</button>
+	<button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="appendToDisplay('/')"class="operator_btn">/</button>
+    <button onclick="appendToDisplay('0')">0</button>
+    <button onclick="appendToDisplay('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="clearDisplay()"class="operator_btn">C</button>
+	
+  </div>
 
-     <div class='text'>
-	    <div class='digit'>
-		 <p class='digit'>7</p>
-	     <p class='digit'>8</p> 
-	     <p class='digit'>9</p>
-	     <p class='digit'>4</p>
-	     <p class='digit'>5</p>
-	     <p class='digit'>6</p>
-	     <p class='digit'>1</p>
-	     <p class='digit'>2</p>
-	     <p class='digit'>3</p>
-	     <p class='digit'>.</p>
-	     <p class='digit'>0</p>
-	     <p class='digit'></p>
-		 </div>
-		 
-		   <div class='digit_icon'>
-		     <button>DEL</button>
-		     <button><i class="fa-solid fa-divide"></i></button>
-		     <button><i class="fa-solid fa-xmark"></i></button>
-		     <button><i class="fa-solid fa-minus"></i></button>
-		     <button><i class="fa-solid fa-plus"></i></button>
-			 	   
-		   </div>
-	 </div>
+   
 </div>
 
 <script>
 
+const display =document.querySelector('#display');
+console.log(display);
 
+function appendToDisplay(input){
+display.value +=input;
+
+} 
+
+function clearDisplay(){
+display.value='';
+}
+
+function calculate(){
+display.value=eval(display.value);
+}
 
 </script>
 
