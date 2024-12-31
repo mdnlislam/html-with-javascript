@@ -109,3 +109,34 @@
 .text_2{
 	color:blue;
 }
+.tiles{
+	display:flex;
+	justify-content:space-between;
+	margin-top:-35%;
+	margin-left:50px;
+	margin-right:50px;
+}
+
+
+.tiles_picture1{
+	width:200px;
+	height:300px;
+}
+.tiles_picture2{
+	width:200px;
+	height:300px;
+	
+}
+.tiles_name1{
+	display:flex;
+	justify-content:space-between;
+	margin-left:40px;
+	margin-right:40px;
+	
+}
+.wall_tiles{
+	display:none;
+}
+.floor_tiles{
+	display:none;
+}
