@@ -83,6 +83,7 @@ background-color:;
     <button onclick="appendToDisplay('.')">.</button>
     <button onclick="calculate()">=</button>
     <button onclick="clearDisplay()"class="operator_btn">C</button>
+    <button onclick="popDisplay()"class="operator_btn">D</button>
 	
   </div>
 
@@ -91,20 +92,34 @@ background-color:;
 
 <script>
 
-const display =document.querySelector('#display');
-console.log(display);
+const display = document.querySelector('#display');
 
-function appendToDisplay(input){
-display.value +=input;
+console.log(display.value); // display.value দেখুন
 
-} 
+function appendToDisplay(input) {
+    const lastChar = display.value.slice(-1); // lastChar সঠিকভাবে ব্যবহার করুন
+    const operators = ['+', '-', '*', '/','.'];
 
-function clearDisplay(){
-display.value='';
+    if (operators.includes(input) && operators.includes(lastChar)) {
+        return; // একাধিক অপারেটর প্রতিরোধ
+    }
+    display.value += input;
 }
 
-function calculate(){
-display.value=eval(display.value);
+function clearDisplay() {
+    display.value = ''; // ডিসপ্লে খালি করুন
+}
+
+function calculate() {
+    try {
+        display.value = eval(display.value); // গণনা করুন
+    } catch {
+        display.value = "Error"; // ত্রুটি হলে 'Error' দেখান
+    }
+}
+
+function popDisplay() {
+    display.value = display.value.slice(0, -1); // শেষ ক্যারেক্টার মুছুন
 }
 
 </script>

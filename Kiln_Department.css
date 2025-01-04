@@ -133,10 +133,14 @@
 	margin-left:40px;
 	margin-right:40px;
 	
+	
 }
 .wall_tiles{
 	display:none;
 }
 .floor_tiles{
 	display:none;
+}
+.out_put{
+	margin-top:-50px;
 }
