@@ -1,0 +1,66 @@
+<!DOCTYPE.html>
+<html>
+
+
+<head>
+
+<style>
+.digit_text{
+display:block;
+padding:20px;
+
+}
+input{
+padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class='calucator'>
+
+<form>
+ <div class='out_put'>
+ <input type='text' id='input_text'>
+ </div>
+
+<div class='digit_text'>
+   <input type="button" value='C' onclick="Clear()" class="Clear">
+   <input type="button" value="←" onclick="Back()" class="backspace">
+   <input type="button" value="%" onclick="solv('%')">
+   <input type="button" value="/" onclick="solv('/')">
+   <br>
+   <input type="button" value='7' onclick="solv('7')">
+   <input type="button" value='8' onclick="solv('8')">
+   <input type="button" value='9' onclick="solv('9')">
+   <input type="button" value='x' onclick="solv('*')">
+   <br>
+   <input type="button" value='4' onclick="solv('4')">
+   <input type="button" value='5' onclick="solv('5')">
+   <input type="button" value='6' onclick="solv('6')">
+   <input type="button" value='-' onclick="solv('-')">
+   <br>
+   <input type="button" value='1' onclick="solv('1')">
+   <input type="button" value='2' onclick="solv('2')">
+   <input type="button" value='3' onclick="solv('3')">
+   <input type="button" value='+' onclick="solv('+')">
+   <br>
+   <input type="button" value='00' onclick="solv('00')">
+   <input type="button" value='0' onclick="solv('0')">
+   <input type="button" value='.' onclick="solv('.')">
+   <input type="button" value='=' onclick="Result('=')">
+   <br>
+   
+   
+   
+   
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>
+
