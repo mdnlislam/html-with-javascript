@@ -48,3 +48,8 @@ const FindNumber=Digit.find(function(Digit){
 });
 
 console.log(FindNumber);
+
+
+let text = "How are you doing today?";
+const myArray = text.split("o");
+console.log(myArray);
