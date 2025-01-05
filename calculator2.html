@@ -5,13 +5,51 @@
 <head>
 
 <style>
-.digit_text{
-display:block;
+
+.calucator{
+width:100%;
+height:100vh;
+justify-content:center;
+align-items:center;
+display:flex;
+}
+.content{
+background-color: #2c302c;
 padding:20px;
+border-radius:10px;
+}
+.content form input{
+border:0;
+outline:0;
+width:50px;
+height:50px;
+border-radius:8px;
+font-size:15px;
+margin:10px;
+cursor:
 
 }
-input{
-padding:20px;
+.backspace{
+background-color:rgb(237, 89, 30);
+color:white;
+}
+#res{
+padding:10px;
+}
+.Clear{
+background-color:rgb(237, 89, 30);
+color:white;
+}
+
+.out_put{
+display:flex;
+justify-content:flex-end;
+margin:15px 0;
+}
+.out_put input{
+text-align:right;
+flex:1;
+font-size:25px;
 }
 </style>
 </head>
@@ -19,10 +57,10 @@ padding:20px;
 <body>
 
 <div class='calucator'>
-
+<div class='content'>
 <form>
  <div class='out_put'>
- <input type='text' id='input_text'>
+ <input type='text' id='res'>
  </div>
 
 <div class='digit_text'>
@@ -58,9 +96,44 @@ padding:20px;
 </div>
 
 </form>
-
 </div>
+</div>
+<script>
+const output= document.querySelector('#res');
+console.log(output);
 
+function  solv(val){
+const currentvalue=output.value;
+ const lastChar = output.value.slice(-1);
+
+const operator=['+','-','*','/','%','.'];
+
+if(currentvalue===""&& val==="0") return;
+
+if(currentvalue==="" && val==="00") return;
+ if (operator.includes(val) && operator.includes(lastChar)) {
+        return; 
+    }
+output.value +=val;
+
+}
+
+function Result(){
+  output.value= eval(output.value);
+}
+
+function Clear(){
+output.value='';
+
+}
+
+function Back(){
+output.value=output.value.slice(0,-1);
+}
+
+
+
+</script>
 </body>
 </html>
 
