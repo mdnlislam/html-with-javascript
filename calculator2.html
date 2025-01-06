@@ -106,28 +106,38 @@ function  solv(val){
 const currentvalue=output.value;
  const lastChar = output.value.slice(-1);
 
-const operator=['+','-','*','/','%','.','.'];
+const operators=['+','-','*','/','%',];
 
 if(currentvalue===""&& val==="0") return;
 
 if(currentvalue==="" && val==="00") return;
 
 
- if (operator.includes(val) && operator.includes(lastChar)) {
-        return; 
+ if (operators.includes(val) && operators.includes(lastChar)) {
+ const cutOutput=output.value.slice(0,-1);
+  output.value=cutOutput
+ //+
+       // return; 
     }
 
 	
 if(val==='.' ){
- console.log({output});
- if(!output.value){
- val='0.';
- 
+// console.log({output});
+ if(!output.value ||  operators.includes(lastChar)){
+     val='0.';
+
  }
+   else if(output.value.split(/[\+\-\*\%\/]/).pop().includes('.')){
+        return;
+    }
+ 
+ 
 }
 	
-	
+
 output.value +=val;
+
+
 
 }
 
