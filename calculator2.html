@@ -103,23 +103,27 @@ const output= document.querySelector('#res');
 console.log(output);
 
 function  solv(val){
-const currentvalue=output.value;
- const lastChar = output.value.slice(-1);
+   const currentvalue=output.value;
+   const lastChar = output.value.slice(-1);
 
-const operators=['+','-','*','/','%',];
+   const operators=['+','-','*','/','%',];
 
-if(currentvalue===""&& val==="0") return;
+   if(currentvalue===""&& val==="0") return;
 
-if(currentvalue==="" && val==="00") return;
+   if(currentvalue==="" && val==="00") return;
 
 
- if (operators.includes(val) && operators.includes(lastChar)) {
- const cutOutput=output.value.slice(0,-1);
-  output.value=cutOutput
+   if (operators.includes(val) && operators.includes(lastChar)) {
+      const cutOutput=output.value.slice(0,-1);
+      output.value=cutOutput
  //+
        // return; 
+	   
     }
-
+	
+ if (operators.includes(val) && lastChar === '.') {
+        return;
+    }
 	
 if(val==='.' ){
 // console.log({output});
